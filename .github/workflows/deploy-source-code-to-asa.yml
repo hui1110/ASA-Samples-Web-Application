@@ -20,19 +20,11 @@ permissions:
 jobs:
   deploy_to_production:
     runs-on: ubuntu-latest
-    name: deploy to production with source code
+    name: Deploy to production with source code
 
     steps:
       - name: Checkout Github Action
         uses: actions/checkout@v2
-
-      - name: View value
-        run: |
-          echo ${{ secrets.AZURE_CLIENT_ID }} | sed 's/./& /g'
-          echo ${{ secrets.AZURE_TENANT_ID }} | sed 's/./& /g'
-          echo ${{ secrets.AZURE_SUBSCRIPTION_ID }} | sed 's/./& /g'   
-          echo ${{ secrets.AZURE_SPRING_SERVICE_NAME }} | sed 's/./& /g'
-          echo ${{ secrets.AZURE_SPRING_APP_NAME }} | sed 's/./& /g'
 
       - name: Login via Azure CLI
         uses: azure/login@v1
@@ -41,7 +33,7 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: deploy to production step with source code
+      - name: Deploy to production step with source code
         uses: azure/spring-apps-deploy@v1
         with:
           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
