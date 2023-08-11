@@ -3,7 +3,7 @@ on:
   # Automatically trigger it when detected changes in repo
   push:
     branches:
-      [ quickstart ]
+      [ main ]
     paths:
       - '**'
       - '.github/workflows/deploy-source-code-to-asa.yml'
