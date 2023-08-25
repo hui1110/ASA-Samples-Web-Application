@@ -26,12 +26,6 @@ jobs:
       - name: Checkout Github Action
         uses: actions/checkout@v2
 
-      - name: Set up JDK
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: 17
-
       - name: Login via Azure CLI
         uses: azure/login@v1
         with:
@@ -50,4 +44,3 @@ jobs:
           package: ${{ env.ASC_PACKAGE_PATH }}
           runtime-version: Java_17
           target-module: web
-          builder: default
