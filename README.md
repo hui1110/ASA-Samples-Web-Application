@@ -30,6 +30,6 @@ There are 2 branches about this repository:
 
 Please refer to [Quickstart: Launch your first web app](.) (todo: Update the link when the article is ready.) to get more information about running the app in Azure Spring Apps.
 
-<a href="https://localhost:8080/deploy.html">
-    <img src="https://user-images.githubusercontent.com/58474919/236122963-8c0857bb-3822-4485-892a-445fa33f1612.png" alt="Deploy to Azure" width="200px">
+<a href="https://aka.ms/spring/asa-button?url=https://github.com/Azure-Samples/ASA-Samples-Web-Application&branch=quickstart&module=web">
+    <img src="https://springappsbutton.blob.core.windows.net/deploy/Azure-Spring-Apps-button.svg" alt="Deploy to Azure" width="200px">
 </a>
